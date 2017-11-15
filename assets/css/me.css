@@ -21,7 +21,7 @@ p{
 	font-family:'Saira Extra Condensed',serif;
 	font-weight:700;
 	text-transform:uppercase;
-	color:#ffffff;
+	color:#868e96;
 	font-size: 20px;
 }
 .nc{
@@ -35,7 +35,6 @@ p{
 .bg {
     /* The image used */
     background-image: url("../img/background.jpg");
-	opacity: 1;
     /* Full height */
      height: 100%;  
 
@@ -51,4 +50,18 @@ p{
     max-width: 20rem;
     max-height: 20rem;
     border: .8rem solid rgba(255,255,255,.2);
+}
+.bgisi {
+    /* The image used */
+    background-image: url("../img/background.jpg");
+    /* Full height */
+     height: 40%;  
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.judul{
+	color: #343a40;
 }

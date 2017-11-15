@@ -6,30 +6,36 @@ h1,h2,h3,h4,h5,h6 {
 	font-family:'Saira Extra Condensed',serif;
 	font-weight:700;
 	text-transform:uppercase;
-	color:#343a40
+	color:#ffffff
 }
 h1{
 	font-size:6rem;
 	line-height:5.5rem
-	margin-top: 3em;				
+	margin-top: 3%;	
+	color: #ffffff;			
 }
 h2{
 	font-size:3.5rem
 }
-
+p{
+	font-family:'Saira Extra Condensed',serif;
+	font-weight:700;
+	text-transform:uppercase;
+	color:#ffffff;
+	font-size: 20px;
+}
 .nc{
 	color: #ffffff
-
 }
 .ph{
 	margin: 0 auto;
-	padding: 10em 0 3em 0;
+	padding: 5% 0 3% 0;
 	text-align: center;
 }
 .bg {
     /* The image used */
     background-image: url("../img/background.jpg");
-
+	opacity: 1;
     /* Full height */
      height: 100%;  
 
@@ -37,4 +43,12 @@ h2{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.list-social-icons a .fa-lg {
+    font-size: 1.75rem;
+}
+.img-profile {
+    max-width: 20rem;
+    max-height: 20rem;
+    border: .8rem solid rgba(255,255,255,.2);
 }

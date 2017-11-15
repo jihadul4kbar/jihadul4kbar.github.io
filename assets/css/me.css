@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family:'Saira Extra Condensed',serif;
+	font-weight:700;
+	text-transform:uppercase;
+	color:#343a40
+}
+h1{
+	font-size:6rem;
+	line-height:5.5rem
+	margin-top: 3em;				
+}
+h2{
+	font-size:3.5rem
+}
+
+.nc{
+	color: #ffffff
+
+}
+.ph{
+	margin: 0 auto;
+	padding: 10em 0 3em 0;
+	text-align: center;
+}
+.bg {
+    /* The image used */
+    background-image: url("../img/background.jpg");
+
+    /* Full height */
+     height: 100%;  
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

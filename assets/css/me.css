@@ -17,7 +17,7 @@ h1{
 h2{
 	font-size:3.5rem
 }
-p{
+.adrs p{
 	font-family:'Saira Extra Condensed',serif;
 	font-weight:700;
 	text-transform:uppercase;
@@ -62,12 +62,31 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.judul{
+.judul h1{
 	color: #343a40;
+    font-size: 4rem;
 }
 .mb-0{
     color: #555;
 }
 .adrs p{
     color: #ffffff;
+}
+.text-md-right {
+    text-align: right !important;
+}
+.text-primary {
+    color: #868e96 !important;
+}
+section.resume-section .resume-item .resume-date {
+    min-width: 18rem;
+}
+.resume-content p{
+    font-family:'Saira Extra Condensed',serif;
+    font-weight:500;
+    color:#868e96;
+    font-size: 20px;
+}
+.list-icons {
+    font-size: 3rem;
 }

@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="peta"></div>
-    <script>
+    <!-- <script>
         var mymap = L.map('peta').setView([-8.5851875, 116.4190335], 10);
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -21,6 +21,41 @@
                 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             id: 'mapbox.streets'
         }).addTo(mymap);
+    </script> -->
+<script>
+        var cities = L.layerGroup();
+    
+        L.marker([-8.7217397, 116.2798422]).bindPopup('Praya').addTo(cities),
+        L.marker([-8.660827, 116.5182789]).bindPopup('Selong').addTo(cities),
+        L.marker([-8.5877022, 116.0815738]).bindPopup('Mataram').addTo(cities),
+        L.marker([-8.3224654, 116.3353925]).bindPopup('Bayan').addTo(cities);
+    
+    
+        var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+    
+        var streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr}),
+            grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr});
+    
+        var map = L.map('peta', {
+            center: [-8.5851875, 116.4190335],
+            zoom: 10,
+            layers: [ cities, grayscale]
+        });
+    
+        var baseLayers = {
+            "Streets": streets,
+            "Grayscale": grayscale
+            
+        };
+    
+        var overlays = {
+            "Cities": cities
+        };
+    
+        L.control.layers(baseLayers, overlays).addTo(map);
     </script>
 </body>
 </html>

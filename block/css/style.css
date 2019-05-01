@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    height: 100%;
+}
+.latar{
+    background-image: url("../img/Forest.jpg");
+    height: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* opacity: 0.65; */
+}
+.profil{
+    margin: 0 auto;
+    padding: 5% 0 3% 0;
+    text-align: center;
+}
+.gbr-profil{
+    max-width: 20rem;
+    max-height: 20rem;
+    border: .8rem solid rgba(255,255,255,.2);
+    border-radius: 50%;
+}
+
+.nama{
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 100px;
+    font-family: 'Clicker Script', cursive;
+    text-shadow: .8rem  rgba(255,255,255,.2);
+}
+.profesi{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 30px;
+}

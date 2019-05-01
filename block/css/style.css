@@ -32,7 +32,8 @@ body, html{
     font-weight: bold;
     font-size: 100px;
     font-family: 'Clicker Script', cursive;
-    text-shadow: .8rem  rgba(255,255,255,.2);
+    text-shadow: 5px 0px 0px rgba(255,255,255,.2);
+
 }
 .profesi{
     font-family: 'Saira Extra Condensed', sans-serif;

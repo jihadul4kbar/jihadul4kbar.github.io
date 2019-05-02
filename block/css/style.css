@@ -12,11 +12,11 @@ body, html{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* opacity: 0.65; */
+    opacity: 1; 
 }
 .profil{
     margin: 0 auto;
-    padding: 5% 0 3% 0;
+    padding: 5% 0 2% 0;
     text-align: center;
 }
 .gbr-profil{
@@ -24,6 +24,7 @@ body, html{
     max-height: 20rem;
     border: .8rem solid rgba(255,255,255,.2);
     border-radius: 50%;
+    opacity: 1;
 }
 
 .nama{
@@ -33,7 +34,6 @@ body, html{
     font-size: 100px;
     font-family: 'Clicker Script', cursive;
     text-shadow: 5px 0px 0px rgba(255,255,255,.2);
-
 }
 .profesi{
     font-family: 'Saira Extra Condensed', sans-serif;
@@ -41,4 +41,34 @@ body, html{
     color: #ffffff;
     text-transform: uppercase;
     font-size: 30px;
+    padding: 0px;
+    text-shadow: 5px 0px 0px rgba(110, 108, 108, 0.2);
 }
+.sosial-media{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 20px;
+}
+.sosial-media a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.fb{
+    background: #3c5a99;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.tw{
+    background: #00acee;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.linkid{
+    background: #0077b5;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+

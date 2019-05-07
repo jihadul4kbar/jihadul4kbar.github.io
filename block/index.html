@@ -19,6 +19,33 @@
         <div class="sosial-media">
             <a href="https://www.facebook.com/profile.php?id=1612570541" target="_blank" class="fb">#facebook</a> - <a href="https://twitter.com/Jihadul4kbar" target="_blank" class="tw">@twitter</a> - <a href="https://www.linkedin.com/in/jihadul-akbar-22553a105/" target="_blank" class="linkid">#linkedin</a> 
         </div>
+    <div id="menuKu" class="latar-menu">
+        <a href="javascript:void(0)" class="tutupbtn" onclick="tutupMenu()">&times;</a>
+        <div class="menu-isi">
+          <a href="about.html">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Experience</a>
+          <a href="#">Education</a>
+          <a href="#">Skills</a>
+          <a href="#">Interests</a>
+          <a href="#">Awards & Certifications</a>
+          <a href="#">Hobby</a>
+        </div>
+      </div>
+      <div class="tombolmenu">
+        <span class="menudesain" onclick="bukaMenu()">&#9776; Menu</span>
+      </div>
     </div>
+<script>
+/* Membuka menu */
+function bukaMenu() {
+  document.getElementById("menuKu").style.width = "100%";
+}
+
+/* Menutup Menu */
+function tutupMenu() {
+  document.getElementById("menuKu").style.width = "0%";
+}
+</script>
 </body>
 </html>

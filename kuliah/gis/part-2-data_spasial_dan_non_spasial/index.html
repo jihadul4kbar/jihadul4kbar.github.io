@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Part 3 - Data Spasial dan Non-Spasial</title>
+    <link rel="stylesheet" href="/assets/reveal/dist/reset.css">
+    <link rel="stylesheet" href="/assets/reveal/dist/reveal.css">
+    <link rel="stylesheet" href="/assets/reveal/dist/theme/white.css">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="/assets/reveal/plugin/highlight/monokai.css">
+    <!-- Fontawesome -->
+     <link rel="stylesheet" href="/assets/fontawesome-free-6.6.0-web/css/all.min.css">
+</head>
+<body>
+    <div class="reveal bg">
+        <div class="slides">
+
+            <section data-background-image="/assets/img/bg-slide-2.png">
+                <h2>Pertemuan 2: Data Spasial dan Non-Spasial</h2>
+                <ul><li>Definisi data spasial: Data yang berkaitan dengan lokasi dan bentuk di permukaan bumi.</li><li>Definisi data non-spasial: Data yang tidak memiliki informasi geografis.</li>
+                </ul>
+            </section>
+    
+            <section data-background-image="/assets/img/bg-slide-2.png">
+                <h2>Jenis Data Spasial</h2>
+                <ul><li>1. Data Vektor: Titik, garis, dan poligon.</li><li>2. Data Raster: Citra satelit, peta, dan grid.</li><li>3. Metadata: Informasi tambahan tentang data spasial.</li>
+                </ul>
+            </section>
+    
+            <section data-background-image="/assets/img/bg-slide-2.png">
+                <h2>Pengumpulan Data Spasial</h2>
+                <ul><li>1. Pengukuran lapangan.</li><li>2. Citra satelit.</li><li>3. Data sensus dan survei.</li>
+                </ul>
+            </section>
+    
+            <section data-background-image="/assets/img/bg-slide-2.png">
+                <h2>Pengolahan Data Non-Spasial</h2>
+                <ul><li>1. Pengumpulan data dari sumber yang berbeda.</li><li>2. Pemberian atribut pada data spasial.</li><li>3. Penerapan data non-spasial pada analisis spasial.</li>
+                </ul>
+            </section>
+    
+            <section data-background-image="/assets/img/bg-slide-2.png">
+                <h2>Praktik: Mengimpor Data ke QGIS</h2>
+                <ul><li>Langkah-langkah untuk mengimpor data vektor dan raster ke dalam QGIS.</li><li>Menambahkan layer dan mengatur simbolisasi.</li>
+                </ul>
+            </section>
+    
+            <section data-background-image="/assets/img/bg-slide-2.png">
+                <h2>Studi Kasus: Pemetaan Wilayah Tertentu</h2>
+                <ul><li>Contoh penggunaan data spasial dalam pemetaan wilayah.</li><li>Analisis sebaran populasi, penggunaan lahan, dan sumber daya.</li>
+                </ul>
+            </section>
+    
+            <section data-background-image="/assets/img/bg-slide-2.png">
+                <h2>Penutup</h2>
+                <ul><li>Review materi yang telah dibahas.</li><li>Persiapan untuk pertemuan berikutnya.</li>
+                </ul>
+            </section>
+    
+        </div>
+    </div>
+    <script src="/assets/reveal/dist/reveal.js"></script>
+    <script src="/assets/reveal/plugin/notes/notes.js"></script>
+    <script src="/assets/reveal/plugin/markdown/markdown.js"></script>
+    <script src="/assets/reveal/plugin/highlight/highlight.js"></script>
+    <!-- Chart plugin -->
+	<script src="/assets/reveal.js-plugins/chart/plugin.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <script>
+			Reveal.initialize({
+				hash: true,// The "normal" size of the presentation, aspect ratio will
+                controls: true,
+                margin: 0,
+                minScale: 0.2,
+                maxScale: 2.0,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+    </script>
+</body>
+</html>

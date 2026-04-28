@@ -8,11 +8,13 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCheckSquare, faCoffee, faGlobe, faBook, faX, faGraduationCap, faFlask, faCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { translate } from '@docusaurus/Translate';
 library.add(fab, faCheckSquare, faCoffee, faGlobe, faBook, faX, faGraduationCap, faFlask, faCode);
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const {siteConfig, i18n} = useDocusaurusContext();
+  const t = (id, message) => translate({id, message}, {locale: i18n.currentLocale});
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -21,15 +23,14 @@ function HomepageHeader() {
             <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
             <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
             <p className={styles.heroDescription}>
-              Passionate about computer science education, software engineering, and innovative research. 
-              Dedicated to shaping the next generation of tech professionals at STMIK Lombok.
+              {t('homepage.hero.description', 'Bergairah dalam pendidikan ilmu komputer, rekayasa perangkat lunak, dan penelitian inovatif. Berdedikasi untuk membentuk generasi profesional teknologi berikutnya di STMIK Lombok.')}
             </p>
             <div className={styles.ctaButtons}>
               <Link className={clsx('button button--primary button--lg', styles.ctaButton)} to="/resume">
-                View Resume
+                {t('homepage.hero.cta.resume', 'Lihat Riwayat')}
               </Link>
               <Link className={clsx('button button--outline button--lg', styles.ctaButtonOutline)} to="/project">
-                See Projects
+                {t('homepage.hero.cta.projects', 'Lihat Proyek')}
               </Link>
             </div>
           </div>
@@ -62,21 +63,23 @@ function HomepageHeader() {
 }
 
 function FeatureHighlight() {
+  const {i18n} = useDocusaurusContext();
+  const t = (id, message) => translate({id, message}, {locale: i18n.currentLocale});
   const features = [
     {
       icon: faGraduationCap,
-      title: 'Teaching',
-      description: 'Educating students in software engineering, web development, and information systems.'
+      title: t('homepage.features.teaching.title', 'Pengajaran'),
+      description: t('homepage.features.teaching.description', 'Mendidik mahasiswa dalam rekayasa perangkat lunak, pengembangan web, dan sistem informasi.')
     },
     {
       icon: faFlask,
-      title: 'Research',
-      description: 'Exploring innovative solutions in computer science and educational technology.'
+      title: t('homepage.features.research.title', 'Penelitian'),
+      description: t('homepage.features.research.description', 'Menjelajahi solusi inovatif dalam ilmu komputer dan teknologi pendidikan.')
     },
     {
       icon: faCode,
-      title: 'Development',
-      description: 'Building practical applications and tools for academic and industry needs.'
+      title: t('homepage.features.development.title', 'Pengembangan'),
+      description: t('homepage.features.development.description', 'Membangun aplikasi dan alat praktis untuk kebutuhan akademik dan industri.')
     }
   ];
 
@@ -100,11 +103,12 @@ function FeatureHighlight() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const {siteConfig, i18n} = useDocusaurusContext();
+  const t = (id, message) => translate({id, message}, {locale: i18n.currentLocale});
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${t('homepage.hero.title', 'Jihadul Akbar')} - ${siteConfig.title}`}
+      description={t('homepage.hero.description', 'Bergairah dalam pendidikan ilmu komputer, rekayasa perangkat lunak, dan penelitian inovatif.')}>
       <HomepageHeader />
       <main>
         <FeatureHighlight />

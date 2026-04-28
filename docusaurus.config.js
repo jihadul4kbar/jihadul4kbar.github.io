@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Jihadul Akbar',
-  tagline: 'Lecturer of STMIK Lombok',
+  tagline: 'Dosen STMIK Lombok',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -37,8 +37,18 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'id',
+    locales: ['id', 'en'],
+    localeConfigs: {
+      id: {
+        label: 'Indonesia',
+        direction: 'ltr',
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+    },
   },
 
   presets: [
@@ -87,16 +97,20 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-          {to: '/', label: 'Home', position: 'right'},
+          {to: '/', label: 'Beranda', position: 'right'},
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'right',
             label: 'Tutorial',
           },
-          {to: '/project', label: 'Project', position: 'right'},
-          {to: '/resume', label: 'Resume', position: 'right'},
+          {to: '/project', label: 'Proyek', position: 'right'},
+          {to: '/resume', label: 'Riwayat', position: 'right'},
           {to: '/blog', label: 'Blog', position: 'right'},
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
           {
             href: 'https://github.com/jihadul4kbar',
             label: 'GitHub',

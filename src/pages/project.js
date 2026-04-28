@@ -1,32 +1,33 @@
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import ProjectPage from '@site/src/components/ProjectPage';
-
+import { translate } from '@docusaurus/Translate';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const {i18n} = useDocusaurusContext();
+  const t = (id, message) => translate({id, message}, {locale: i18n.currentLocale});
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          Project
+          {t('project.title', 'Proyek')}
         </Heading>
-        <p className="hero__subtitle">My Project </p>
+        <p className="hero__subtitle">{t('project.description', 'Berikut adalah beberapa proyek yang telah saya kerjakan.')}</p>
       </div>
     </header>
   );
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const {siteConfig, i18n} = useDocusaurusContext();
+  const t = (id, message) => translate({id, message}, {locale: i18n.currentLocale});
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={t('project.title', 'Proyek')}
+      description={t('project.description', 'Berikut adalah beberapa proyek yang telah saya kerjakan.')}>
       <HomepageHeader />
       <main>
         <ProjectPage />

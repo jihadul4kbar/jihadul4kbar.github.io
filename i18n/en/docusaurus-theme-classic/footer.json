@@ -1,0 +1,18 @@
+{
+  "footer.about.title": {
+    "message": "About",
+    "description": "Footer about section title"
+  },
+  "footer.community.title": {
+    "message": "Community",
+    "description": "Footer community section title"
+  },
+  "footer.more.title": {
+    "message": "More",
+    "description": "Footer more section title"
+  },
+  "footer.copyright": {
+    "message": "Copyright © {year} Jihadul Akbar. Dibangun dengan Docusaurus.",
+    "description": "Footer copyright text"
+  }
+}

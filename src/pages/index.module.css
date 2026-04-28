@@ -4,29 +4,241 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 5rem 0;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 2rem;
 }
 
-.buttons {
+.heroText {
+  flex: 1;
+  text-align: left;
+  color: #fff;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.heroDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+  max-width: 600px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: #fff;
+  color: var(--ifm-color-primary-darkest);
+  border: none;
+}
+
+.ctaButton:hover {
+  background: #f8fafc;
+  color: var(--ifm-color-primary);
+}
+
+.ctaButtonOutline {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.ctaButtonOutline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.heroImage {
+  flex: 0 0 auto;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.socialIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.icon{
-  display: inline-block;  
-  color: #ffffff;
-  padding: 5px;
-  margin: 5px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
+.socialIcon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+/* Feature Highlight Section */
+.featureHighlight {
+  padding: 4rem 0;
+  background: var(--ifm-background-color);
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background: var(--ifm-card-background-color);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.featureIcon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--ifm-color-primary-lightest), var(--ifm-color-primary-light));
+  color: var(--ifm-color-primary-darkest);
+}
+
+[data-theme='dark'] .featureIcon {
+  background: linear-gradient(135deg, var(--ifm-color-primary-darker), var(--ifm-color-primary-dark));
+  color: #fff;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.featureDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-font-color-base);
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1rem;
+  }
+
+  .heroContent {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .heroText {
+    text-align: center;
+  }
+
+  .heroDescription {
+    max-width: 100%;
+  }
+
+  .ctaButtons {
+    justify-content: center;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .imageWrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaButton,
+  .ctaButtonOutline {
+    width: 100%;
+  }
+
+  .socialLinks {
+    gap: 1rem;
+  }
+
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+  }
+}

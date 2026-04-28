@@ -44,7 +44,7 @@ function HomepageHeader() {
           <Link className={styles.socialIcon} to="https://scholar.google.com/citations?user=iLr5dMcAAAAJ" title="Google Scholar">
             <FontAwesomeIcon icon={faGlobe} />
           </Link>
-          <Link className={styles.socialIcon} to="https://sinta.kemdikbud.go.id/authors/profile/6890356" title="Sinta">
+          <Link className={styles.socialIcon} to="https://sinta.kemdiktisaintek.go.id/authors/profile/6890356" title="Sinta">
             <FontAwesomeIcon icon={faBook} />
           </Link>
           <Link className={styles.socialIcon} to="https://www.facebook.com/people/Jihadul-Akbar/pfbid02pSVhvKmsYz1DyFdyRJ6Gqr4whgtd9PgbbyBdjhnm5Q66Pd5g2CpCAmfBzKDCc5Jvl/" title="Facebook">

@@ -2,13 +2,17 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import { translate } from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faChalkboardTeacher, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import styles from './styles.module.css';
 
-function Feature({Svg, title, description}) {
+function Feature({icon, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <div className={styles.featureIcon}>
+          <FontAwesomeIcon icon={icon} size="4x" />
+        </div>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -24,7 +28,7 @@ export default function HomepageFeatures() {
   const FeatureList = [
     {
       title: t('homepage.features.publications.title', 'Publikasi'),
-      Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+      icon: faBook,
       description: (
         <>
           {t('homepage.features.publications.description', 'Makalah penelitian dan artikel di jurnal dan konferensi terakreditasi, berfokus pada teknologi pendidikan dan rekayasa perangkat lunak.')}
@@ -33,7 +37,7 @@ export default function HomepageFeatures() {
     },
     {
       title: t('homepage.features.materials.title', 'Materi Pengajaran'),
-      Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+      icon: faChalkboardTeacher,
       description: (
         <>
           {t('homepage.features.materials.description', 'Materi kuliah, tutorial, dan panduan komprehensif untuk mahasiswa ilmu komputer dan sistem informasi.')}
@@ -42,7 +46,7 @@ export default function HomepageFeatures() {
     },
     {
       title: t('homepage.features.projects.title', 'Proyek'),
-      Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+      icon: faLaptopCode,
       description: (
         <>
           {t('homepage.features.projects.description', 'Aplikasi praktis dan alat yang dikembangkan untuk penelitian akademik, pengajaran, dan pengabdian masyarakat.')}

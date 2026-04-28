@@ -2,13 +2,17 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import { translate } from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilm, faHospital, faCloudSun, faComments, faWater, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import styles from './styles.module.css';
 
-function Feature({Svg, title, description}) {
+function Feature({icon, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <div className={styles.projectIcon}>
+          <FontAwesomeIcon icon={icon} size="4x" />
+        </div>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -24,7 +28,7 @@ export default function HomepageFeatures() {
   const FeatureList = [
     {
       title: 'Klasifikasi Genre Film dengan LSTM',
-      Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+      icon: faFilm,
       description: (
         <>
           Multi-label classification film genres berdasarkan sinopsis menggunakan metode Long Short-Term Memory (LSTM). 
@@ -34,7 +38,7 @@ export default function HomepageFeatures() {
     },
     {
       title: 'Sistem Informasi Rekam Medis',
-      Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+      icon: faHospital,
       description: (
         <>
           Sistem informasi rekam medis berbasis web untuk Klinik Risa Rafana menggunakan metodologi Extreme Programming. 
@@ -44,7 +48,7 @@ export default function HomepageFeatures() {
     },
     {
       title: 'SIMA Stasiun Meteorologi',
-      Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+      icon: faCloudSun,
       description: (
         <>
           Sistem Informasi Monitoring Alat (SIMA) untuk Stasiun Meteorologi Zainuddin Abdul Madjid. 
@@ -54,7 +58,7 @@ export default function HomepageFeatures() {
     },
     {
       title: 'Topic Modeling PeduliLindungi',
-      Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+      icon: faComments,
       description: (
         <>
           Pemodelan topik menggunakan Latent Dirichlet Allocation (LDA) pada ulasan aplikasi PeduliLindungi. 
@@ -64,7 +68,7 @@ export default function HomepageFeatures() {
     },
     {
       title: 'Analisis Sentimen Wisata',
-      Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+      icon: faWater,
       description: (
         <>
           Analisis sentimen wisata air terjun di Kabupaten Lombok Tengah menggunakan metode Support Vector Machine (SVM). 
@@ -74,7 +78,7 @@ export default function HomepageFeatures() {
     },
     {
       title: 'Sistem Rekomendasi Kuliner Lombok',
-      Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+      icon: faUtensils,
       description: (
         <>
           Sistem rekomendasi kuliner di Lombok menggunakan Latent Dirichlet Allocation dan Content-Based Filtering. 

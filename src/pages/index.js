@@ -252,7 +252,7 @@ export default function Home() {
             <span className="corner br"></span>
             <div className="frame">
               <img
-                src="https://avatars.githubusercontent.com/u/32048620?v=4"
+                src="/img/jihadulakbar.png"
                 alt="Jihadul Akbar"
               />
             </div>

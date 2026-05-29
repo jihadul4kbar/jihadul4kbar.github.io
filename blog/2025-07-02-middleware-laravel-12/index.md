@@ -1,6 +1,7 @@
 ---
 slug: Middleware Laravel 12
-title: Memahami cara kerja Midellware pada Laravel 12
+title: Memahami cara kerja Middleware pada Laravel 12
+date: 2025-07-02
 authors: [jihadul4kbar]
 tags: [Tutorial, Laravel, Web, Web Software Developer]
 ---

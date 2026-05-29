@@ -1,6 +1,7 @@
 ---
 slug: Add widgets monitoring port on Libre LMS
 title: Setup widgets for monitoring port on LibreLMS
+date: 2025-01-18
 authors: [jihadul4kbar, hadyanwijaya, hairulfhm]
 tags: [tutorial, libreLMS, Network]
 ---

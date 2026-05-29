@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <Layout
       title={t('resume.contact.title', 'Informasi Kontak')}
-      description="Resume and academic profile of Jihadul Akbar">
+      description="Academic resume of Jihadul Akbar, S.Kom., M.Kom. — Lecturer at STMIK Lombok. Research in NLP, Machine Learning, Software Engineering. Publications on text classification, topic modeling, and sentiment analysis.">
       <HomepageHeader />
       <main>
         <ResumePage />

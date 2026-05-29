@@ -27,6 +27,7 @@ const config = {
   deploymentBranch: 'master',
 
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'warn',
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
@@ -61,7 +62,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/jihadul4kbar/jihadul4kbar.github.io/tree/source/',
         },
         blog: {
           showReadingTime: true,
@@ -72,7 +73,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/jihadul4kbar/jihadul4kbar.github.io/tree/source/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -93,34 +94,32 @@ const config = {
       navbar: {
         title: 'Jihadul Akbar',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'JA',
           src: 'img/logo.png',
         },
         items: [
-          {to: '/', label: 'Beranda', position: 'right'},
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'right',
-            label: 'Tutorial',
-          },
-          {to: '/project', label: 'Proyek', position: 'right'},
-          {to: '/resume', label: 'Riwayat', position: 'right'},
+          {to: '/#fokus', label: 'Fokus', position: 'right'},
+          {to: '/#riset', label: 'Penelitian', position: 'right'},
+          {to: '/#proyek', label: 'Proyek', position: 'right'},
+          {to: '/docs/intro', label: 'Buku', position: 'right'},
           {to: '/blog', label: 'Blog', position: 'right'},
+          {to: '/resume', label: 'Riwayat', position: 'right'},
+          {to: '/#kontak', label: 'Kontak', position: 'right'},
           {
             type: 'localeDropdown',
             position: 'right',
           },
           {
             href: 'https://github.com/jihadul4kbar',
-            label: 'GitHub',
+            'aria-label': 'GitHub',
             position: 'right',
+            className: 'navbar-github-link',
           },
         ],
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Jihadul Akbar. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Jihadul Akbar — STMIK Lombok`,
       },
       prism: {
         theme: prismThemes.github,

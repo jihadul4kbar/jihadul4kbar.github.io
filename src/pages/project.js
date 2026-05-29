@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <Layout
       title={t('project.title', 'Proyek')}
-      description={t('project.description', 'Berikut adalah beberapa proyek yang telah saya kerjakan.')}>
+      description="Research projects by Jihadul Akbar — LSTM film genre classification, medical record system, topic modeling, sentiment analysis, and recommendation systems.">
       <HomepageHeader />
       <main>
         <ProjectPage />

@@ -1,26 +1,30 @@
 {
-  "item.label.Beranda": {
-    "message": "Home",
-    "description": "Navbar item with label 'Beranda'"
+  "item.label.Fokus": {
+    "message": "Focus",
+    "description": "Navbar item with label 'Fokus'"
   },
-  "item.label.Tutorial": {
-    "message": "Tutorial",
-    "description": "Navbar item with label 'Tutorial'"
+  "item.label.Penelitian": {
+    "message": "Research",
+    "description": "Navbar item with label 'Penelitian'"
   },
   "item.label.Proyek": {
     "message": "Projects",
     "description": "Navbar item with label 'Proyek'"
   },
-  "item.label.Riwayat": {
-    "message": "Resume",
-    "description": "Navbar item with label 'Riwayat'"
+  "item.label.Buku": {
+    "message": "Books",
+    "description": "Navbar item with label 'Buku'"
   },
   "item.label.Blog": {
     "message": "Blog",
     "description": "Navbar item with label 'Blog'"
   },
-  "item.label.GitHub": {
-    "message": "GitHub",
-    "description": "Navbar item with label 'GitHub'"
+  "item.label.Riwayat": {
+    "message": "Resume",
+    "description": "Navbar item with label 'Riwayat'"
+  },
+  "item.label.Kontak": {
+    "message": "Contact",
+    "description": "Navbar item with label 'Kontak'"
   }
 }

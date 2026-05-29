@@ -1,34 +1,189 @@
-.features {
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page {
+  padding: 3rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--ifm-card-background-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--ifm-color-emphasis-100);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.15s; }
+.card:nth-child(4) { animation-delay: 0.2s; }
+.card:nth-child(5) { animation-delay: 0.25s; }
+.card:nth-child(6) { animation-delay: 0.3s; }
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-emphasis-200);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cardIcon {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
-  width: 100%;
-}
-
-.featureSvg {
-  height: 200px;
-  width: 200px;
-}
-
-.projectIcon {
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
   background: linear-gradient(135deg, var(--ifm-color-primary-lightest), var(--ifm-color-primary-light));
   color: var(--ifm-color-primary-darkest);
-  margin: 0 auto 1rem;
+  flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
-[data-theme='dark'] .projectIcon {
+.card:hover .cardIcon {
+  transform: scale(1.05);
+}
+
+[data-theme='dark'] .cardIcon {
   background: linear-gradient(135deg, var(--ifm-color-primary-darker), var(--ifm-color-primary-dark));
   color: #fff;
 }
 
-.projectIcon:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+
+.yearBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--ifm-color-primary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.techBadge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--ifm-color-primary-darkest);
+  background: var(--ifm-color-primary-lightest);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .techBadge {
+  background: var(--ifm-color-primary-darker);
+  color: #fff;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: var(--ifm-heading-color);
+  line-height: 1.4;
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ifm-font-color-base);
+  opacity: 0.85;
+  margin: 0 0 1rem;
+  flex: 1;
+}
+
+.cardLinks {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-100);
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-50);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.cardLink:hover {
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest);
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+[data-theme='dark'] .cardLink:hover {
+  background: var(--ifm-color-primary-darker);
+  color: #fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 996px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .page {
+    padding: 2rem 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .cardMeta {
+    justify-content: flex-start;
+  }
+
+  .cardIcon {
+    width: 64px;
+    height: 64px;
+  }
 }

@@ -74,52 +74,52 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'Klasifikasi Genre Film dengan LSTM',
-      tag: isEn ? 'Research' : 'Penelitian',
-      year: '2025',
+      title: isEn ? 'Film Genre Classification with LSTM' : 'Klasifikasi Genre Film dengan LSTM',
+      tagYear: isEn ? 'Research · 2025' : 'Penelitian · 2025',
       tech: ['LSTM', 'Deep Learning', 'NLP', 'Python'],
       descId: 'Multi-label classification genre film berdasarkan sinopsis menggunakan Long Short-Term Memory (LSTM). Model deep learning untuk mengklasifikasikan genre film dari teks sinopsis.',
       descEn: 'Multi-label film genre classification from synopsis using LSTM. Deep learning model for classifying film genres from synopsis text.',
+      href: 'https://scholar.google.com/citations?user=iLr5dMcAAAAJ',
     },
     {
-      title: 'Sistem Informasi Rekam Medis',
-      tag: isEn ? 'Research' : 'Penelitian',
-      year: '2021',
-      tech: ['PHP', 'MySQL', 'Extreme Programming', 'Web'],
-      descId: 'Sistem informasi rekam medis berbasis web untuk Klinik Risa Rafana menggunakan Extreme Programming. Mengelola data pasien, riwayat medis, dan jadwal konsultasi.',
-      descEn: 'Web-based medical record system for Klinik Risa Rafana using Extreme Programming. Manages patient data, medical history, and consultation schedules.',
-    },
-    {
-      title: 'SIMA Stasiun Meteorologi',
-      tag: isEn ? 'Research' : 'Penelitian',
-      year: '2023',
-      tech: ['Web', 'Monitoring', 'Real-time'],
-      descId: 'Sistem Informasi Monitoring Alat (SIMA) untuk Stasiun Meteorologi Zainuddin Abdul Madjid. Memantau alat meteorologi secara real-time dan menghasilkan laporan otomatis.',
-      descEn: 'Equipment Monitoring Information System for Zainuddin Abdul Madjid Meteorological Station. Real-time weather equipment monitoring with automatic reports.',
-    },
-    {
-      title: 'Topic Modeling PeduliLindungi',
-      tag: isEn ? 'Research' : 'Penelitian',
-      year: '2023',
-      tech: ['LDA', 'NLP', 'Python'],
-      descId: 'Pemodelan topik menggunakan LDA pada ulasan aplikasi PeduliLindungi. Mengidentifikasi tema utama dari feedback pengguna aplikasi.',
-      descEn: 'Topic modeling using LDA on PeduliLindungi app reviews. Identifies key themes from user feedback.',
-    },
-    {
-      title: 'Analisis Sentimen Wisata',
-      tag: isEn ? 'Research' : 'Penelitian',
-      year: '2023',
-      tech: ['SVM', 'Sentiment Analysis', 'Python'],
-      descId: 'Analisis sentimen wisata air terjun di Lombok Tengah menggunakan SVM. Menganalisis opini wisatawan dari data media sosial.',
-      descEn: 'Sentiment analysis of waterfall tourism in Central Lombok using SVM. Analyzes tourist opinions from social media data.',
-    },
-    {
-      title: 'Sistem Rekomendasi Kuliner Lombok',
-      tag: isEn ? 'Research' : 'Penelitian',
-      year: '2024',
+      title: isEn ? 'Lombok Culinary Recommender' : 'Sistem Rekomendasi Kuliner Lombok',
+      tagYear: isEn ? 'Research · 2024' : 'Penelitian · 2024',
       tech: ['LDA', 'Content-Based Filtering', 'Recommendation'],
       descId: 'Sistem rekomendasi kuliner di Lombok menggunakan LDA dan Content-Based Filtering. Membantu wisatawan menemukan tempat makan berdasarkan preferensi.',
       descEn: 'Culinary recommendation system in Lombok using LDA and Content-Based Filtering. Helps tourists find dining places based on preferences.',
+      href: 'https://scholar.google.com/citations?user=iLr5dMcAAAAJ',
+    },
+    {
+      title: isEn ? 'SIMA Meteorology Station' : 'SIMA Stasiun Meteorologi',
+      tagYear: isEn ? 'Research · 2023' : 'Penelitian · 2023',
+      tech: ['Web', 'Monitoring', 'Real-time'],
+      descId: 'Sistem Informasi Monitoring Alat (SIMA) untuk Stasiun Meteorologi Zainuddin Abdul Madjid. Memantau alat meteorologi secara real-time dan menghasilkan laporan otomatis.',
+      descEn: 'Equipment Monitoring Information System for Zainuddin Abdul Madjid Meteorological Station. Real-time weather equipment monitoring with automatic reports.',
+      href: 'https://scholar.google.com/citations?user=iLr5dMcAAAAJ',
+    },
+    {
+      title: isEn ? 'PeduliLindungi Topic Modeling' : 'Topic Modeling PeduliLindungi',
+      tagYear: isEn ? 'Research · 2023' : 'Penelitian · 2023',
+      tech: ['LDA', 'NLP', 'Python'],
+      descId: 'Pemodelan topik menggunakan LDA pada ulasan aplikasi PeduliLindungi. Mengidentifikasi tema utama dari feedback pengguna aplikasi.',
+      descEn: 'Topic modeling using LDA on PeduliLindungi app reviews. Identifies key themes from user feedback.',
+      href: 'https://scholar.google.com/citations?user=iLr5dMcAAAAJ',
+    },
+    {
+      title: isEn ? 'Tourism Sentiment Analysis' : 'Analisis Sentimen Wisata',
+      tagYear: isEn ? 'Research · 2023' : 'Penelitian · 2023',
+      tech: ['SVM', 'Sentiment Analysis', 'Python'],
+      descId: 'Analisis sentimen wisata air terjun di Lombok Tengah menggunakan SVM. Menganalisis opini wisatawan dari data media sosial.',
+      descEn: 'Sentiment analysis of waterfall tourism in Central Lombok using SVM. Analyzes tourist opinions from social media data.',
+      href: 'https://scholar.google.com/citations?user=iLr5dMcAAAAJ',
+    },
+    {
+      title: isEn ? 'Medical Records System' : 'Sistem Informasi Rekam Medis',
+      tagYear: isEn ? 'Research · 2021' : 'Penelitian · 2021',
+      tech: ['PHP', 'MySQL', 'Extreme Programming', 'Web'],
+      descId: 'Sistem informasi rekam medis berbasis web untuk Klinik Risa Rafana menggunakan Extreme Programming. Mengelola data pasien, riwayat medis, dan jadwal konsultasi.',
+      descEn: 'Web-based medical record system for Klinik Risa Rafana using Extreme Programming. Manages patient data, medical history, and consultation schedules.',
+      href: 'https://scholar.google.com/citations?user=iLr5dMcAAAAJ',
     },
   ];
 
@@ -201,6 +201,8 @@ export default function Home() {
         ? 'Passionate about computer-science education, software engineering, and innovative research.'
         : 'Bergairah dalam pendidikan ilmu komputer, rekayasa perangkat lunak, dan penelitian inovatif.'}
     >
+      <div className="glows" aria-hidden="true"><span className="g1"></span><span className="g2"></span><span className="g3"></span></div>
+
       {/* HERO */}
       <header className="hero-section" id="top">
         <div className="hero-text">
@@ -211,7 +213,7 @@ export default function Home() {
           </Reveal>
           <Reveal>
             <h1 className="hero-name">
-              Jihadul<br /><span className="l2">Akbar</span>
+              <span className="l1">Jihadul</span><br /><span className="l2">Akbar</span>
             </h1>
           </Reveal>
           <Reveal>
@@ -256,6 +258,7 @@ export default function Home() {
               <img
                 src="/img/jihadulakbar.png"
                 alt="Jihadul Akbar"
+                onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('noimg'); }}
               />
             </div>
             <div className="tag">
@@ -371,18 +374,16 @@ export default function Home() {
       >
         <div className="grid-2">
           {projects.map((proj, i) => (
-            <Reveal className="proj" key={i}>
-              <div className="ptop">
-                <span className="ptag">{proj.tag}</span>
-                <span className="year-tag">{proj.year}</span>
-              </div>
-              <h3>{proj.title}</h3>
-              <p>{isEn ? proj.descEn : proj.descId}</p>
-              <div className="stack">
-                {proj.tech.map((t, j) => <span key={j}>· {t}</span>)}
-              </div>
-              <a className="proj-link" href="https://scholar.google.com/citations?user=iLr5dMcAAAAJ" target="_blank" rel="noopener">
-                {isEn ? 'View Paper' : 'Lihat Paper'} →
+            <Reveal key={i}>
+              <a className="proj" href={proj.href} target="_blank" rel="noopener">
+                <div className="ptop">
+                  <span className="ptag">{proj.tagYear}</span>
+                </div>
+                <h3>{proj.title}</h3>
+                <p>{isEn ? proj.descEn : proj.descId}</p>
+                <div className="stack">
+                  {proj.tech.map((t, j) => <span key={j}>· {t}</span>)}
+                </div>
               </a>
             </Reveal>
           ))}
@@ -524,10 +525,10 @@ export default function Home() {
             </div>
             <div className="contact-links">
               <a className="clink" href="mailto:jihadul4kbar@gmail.com">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="17" height="17"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 5l10 7 10-7"/></svg> Email
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="17" height="17"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Email
               </a>
               <a className="clink" href="mailto:jihadulakbar@stmiklombok.ac.id">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="17" height="17"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 5l10 7 10-7"/></svg> Email Institusi
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="17" height="17"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Email Institusi
               </a>
               <a className="clink" href="https://wa.me/6287864576745" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.762-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Whatsapp

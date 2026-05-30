@@ -470,21 +470,29 @@ export default function Home() {
           label: isEn ? 'All talks' : 'Semua kegiatan',
         }}
       >
-        <div className="talks-list">
-          {talks.map((talk, i) => (
-            <a className="talk-item" href={`/speaker#${talk.slug}`} key={i}>
-              <Reveal>
-                <span className="talk-date">{isEn ? talk.dateEn : talk.date}</span>
-                <div className="talk-body">
-                  <h3>{isEn ? talk.titleEn : talk.title}</h3>
-                  <div className="talk-tags">
-                    {talk.tags.map((t, j) => <span key={j}>{t}</span>)}
-                  </div>
-                  <span className="talk-more">{isEn ? 'View details' : 'Lihat detail'} →</span>
-                </div>
-              </Reveal>
-            </a>
-          ))}
+        <div className="speaker-layout">
+          <a className="speaker-cover" href="/speaker">
+            <span className="sp-label">{isEn ? 'Speaker Profile' : 'Profil Pembicara'}</span>
+            <span className="sp-title">{isEn ? 'Workshops' : 'Workshop'}<br />{isEn ? '& Seminars' : '& Seminar'}</span>
+            <span className="sp-meta">
+              <b>{talks.length}</b> {isEn ? 'talks · 2025—2026' : 'kegiatan · 2025—2026'}
+              <span className="arr">→</span>
+            </span>
+          </a>
+          <Reveal>
+            <div className="speaker-toc">
+              {talks.map((talk, i) => (
+                <a className="toc-item" href={`/speaker#${talk.slug}`} key={i}>
+                  <span className="ch">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="nm">
+                    {isEn ? talk.titleEn : talk.title}
+                    <small>{isEn ? talk.dateEn : talk.date} · {talk.tags[0]}</small>
+                  </span>
+                  <span className="ar"><ArrowIcon /></span>
+                </a>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </Section>
 

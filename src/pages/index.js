@@ -482,7 +482,7 @@ export default function Home() {
       </Section>
 
       {/* RIWAYAT */}
-      <Section id="riwayat"
+      <Section id="riwayat" band
         idx={isEn ? '07 — RESUME' : '07 — RIWAYAT'}
         title={isEn ? 'A short timeline' : 'Riwayat singkat'}
         sub={isEn ? 'Academic and professional journey.' : 'Perjalanan akademik dan profesional.'}

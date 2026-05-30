@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect} from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
@@ -47,8 +47,6 @@ function ArrowIcon() {
 export default function Home() {
   const {siteConfig, i18n} = useDocusaurusContext();
   const isEn = i18n.currentLocale === 'en';
-  const [contactMethod, setContactMethod] = useState('email');
-
   useEffect(() => {
     const reveals = [...document.querySelectorAll('.reveal')];
     if (!('IntersectionObserver' in window)) {
@@ -518,87 +516,40 @@ export default function Home() {
       {/* KONTAK */}
       <section className="section" id="kontak">
         <div className="wrap">
-          <Reveal>
-            <div className="contact-head">
+          <Reveal className="contact-wrap">
+            <div>
               <span className="sec-idx">08 — {isEn ? 'CONTACT' : 'KONTAK'}</span>
-              <h2>{isEn ? "Let's connect" : 'Mari terhubung'}</h2>
-              <p>{isEn ? 'Open to research collaboration, guest lectures, and mentoring. Choose a channel below to start.' : 'Terbuka untuk kolaborasi penelitian, kuliah tamu, dan bimbingan. Pilih kanal di bawah untuk memulai.'}</p>
+              <h2 style={{marginTop: 14}}>{isEn ? "Let's connect" : 'Mari terhubung'}</h2>
+              <p>{isEn ? 'Open to research collaboration, guest lectures, and mentoring. Find me on the channels below.' : 'Terbuka untuk kolaborasi penelitian, kuliah tamu, dan bimbingan. Temukan saya di kanal berikut.'}</p>
             </div>
-
-            <div className="contact-methods">
-              <button
-                type="button"
-                className={clsx('contact-method', contactMethod === 'email' && 'active')}
-                onClick={() => {
-                  setContactMethod('email');
-                  document.getElementById('contact-form-box')?.scrollIntoView({behavior: 'smooth', block: 'center'});
-                }}
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="28" height="28"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 5l10 7 10-7"/></svg>
-                <span className="cm-title">Email</span>
-                <span className="cm-detail">jihadul4kbar@gmail.com</span>
-              </button>
-              <button
-                type="button"
-                className={clsx('contact-method', contactMethod === 'whatsapp' && 'active')}
-                onClick={() => {
-                  setContactMethod('whatsapp');
-                  document.getElementById('contact-form-box')?.scrollIntoView({behavior: 'smooth', block: 'center'});
-                }}
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.762-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                <span className="cm-title">WhatsApp</span>
-                <span className="cm-detail">+62 878 6457 6745</span>
-              </button>
-            </div>
-
-            <div className="contact-form-box" id="contact-form-box">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const fd = new FormData(e.currentTarget);
-                  const name = fd.get('name');
-                  const email = fd.get('email');
-                  const message = fd.get('message');
-                  if (contactMethod === 'email') {
-                    const subject = encodeURIComponent(`Pesan dari ${name}`);
-                    const body = encodeURIComponent(`Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`);
-                    window.location.href = `mailto:jihadul4kbar@gmail.com?subject=${subject}&body=${body}`;
-                  } else {
-                    const text = encodeURIComponent(`Halo, saya ${name} (${email}).\n\n${message}`);
-                    window.open(`https://wa.me/6287864576745?text=${text}`, '_blank', 'noopener,noreferrer');
-                  }
-                }}
-              >
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="c-name">{isEn ? 'Name' : 'Nama'}</label>
-                    <input id="c-name" name="name" type="text" required placeholder={isEn ? 'Your name' : 'Nama Anda'} />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="c-email">Email</label>
-                    <input id="c-email" name="email" type="email" required placeholder="email@example.com" />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="c-message">{isEn ? 'Message' : 'Pesan'}</label>
-                  <textarea id="c-message" name="message" rows="4" required placeholder={isEn ? 'Write your message...' : 'Tulis pesan Anda...'} />
-                </div>
-                <button className="form-submit" type="submit">
-                  {contactMethod === 'email'
-                    ? (isEn ? 'Send Email →' : 'Kirim Email →')
-                    : (isEn ? 'Open WhatsApp →' : 'Buka WhatsApp →')}
-                </button>
-              </form>
-            </div>
-
-            <div className="contact-social">
-              <a href="https://scholar.google.com/citations?user=iLr5dMcAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-              <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6890356" target="_blank" rel="noopener">SINTA</a>
-              <a href="https://www.linkedin.com/in/jihadul-akbar-22553a105/" target="_blank" rel="noopener">LinkedIn</a>
-              <a href="https://github.com/jihadul4kbar" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://x.com/Jihadul4kbar" target="_blank" rel="noopener">X</a>
-              <a href="https://www.facebook.com/people/Jihadul-Akbar/pfbid02pSVhvKmsYz1DyFdyRJ6Gqr4whgtd9PgbbyBdjhnm5Q66Pd5g2CpCAmfBzKDCc5Jvl/" target="_blank" rel="noopener">Facebook</a>
+            <div className="contact-links">
+              <a className="clink" href="mailto:jihadul4kbar@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="17" height="17"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 5l10 7 10-7"/></svg> jihadul4kbar@gmail.com
+              </a>
+              <a className="clink" href="mailto:jihadulakbar@stmiklombok.ac.id">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="17" height="17"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 5l10 7 10-7"/></svg> jihadulakbar@stmiklombok.ac.id
+              </a>
+              <a className="clink" href="https://wa.me/6287864576745" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.762-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> +62 878 6457 6745
+              </a>
+              <a className="clink" href="https://scholar.google.com/citations?user=iLr5dMcAAAAJ" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13.5L5 12.66V14l7 3.82L19 14v-1.34L12 16.5z"/></svg> Google Scholar
+              </a>
+              <a className="clink" href="https://sinta.kemdiktisaintek.go.id/authors/profile/6890356" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="17" height="17"><path d="M4 19V5M4 19h16M8 16V9M12 16V6M16 16v-4M20 16v-7"/></svg> SINTA
+              </a>
+              <a className="clink" href="https://www.linkedin.com/in/jihadul-akbar-22553a105/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.12 1 2.49 1s2.49 1.12 2.49 2.5zM.24 8h4.5v15H.24V8zm7.5 0h4.31v2.05h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.5v-6.5c0-1.55-.03-3.55-2.16-3.55-2.16 0-2.49 1.69-2.49 3.44V23h-4.5V8z"/></svg> LinkedIn
+              </a>
+              <a className="clink" href="https://github.com/jihadul4kbar" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.21 3.44 9.63 8.21 11.19.6.11.82-.25.82-.56 0-.28-.01-1.02-.02-2-3.34.71-4.04-1.58-4.04-1.58-.55-1.36-1.34-1.73-1.34-1.73-1.09-.73.08-.72.08-.72 1.2.08 1.84 1.21 1.84 1.21 1.07 1.8 2.81 1.28 3.5.98.11-.76.42-1.28.76-1.57-2.67-.3-5.47-1.31-5.47-5.81 0-1.28.47-2.33 1.23-3.15-.12-.3-.53-1.51.12-3.15 0 0 1.01-.32 3.3 1.2.96-.26 1.98-.39 3-.4 1.02.01 2.05.14 3.01.4 2.28-1.52 3.29-1.2 3.29-1.2.65 1.64.24 2.85.12 3.15.77.82 1.23 1.87 1.23 3.15 0 4.51-2.81 5.5-5.49 5.79.43.36.81 1.09.81 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.83.56C20.57 21.91 24 17.5 24 12.29 24 5.78 18.63.5 12 .5z"/></svg> GitHub
+              </a>
+              <a className="clink" href="https://x.com/Jihadul4kbar" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> X (Twitter)
+              </a>
+              <a className="clink" href="https://www.facebook.com/people/Jihadul-Akbar/pfbid02pSVhvKmsYz1DyFdyRJ6Gqr4whgtd9PgbbyBdjhnm5Q66Pd5g2CpCAmfBzKDCc5Jvl/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg> Facebook
+              </a>
             </div>
           </Reveal>
         </div>

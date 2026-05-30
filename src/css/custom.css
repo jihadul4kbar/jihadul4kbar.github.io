@@ -1002,11 +1002,30 @@ h2 {
 
   .portrait {
     order: -1;
-    justify-self: start;
+    justify-self: center;
   }
 
-.lead {
+  .lead {
     max-width: 46ch;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 110px 1.25rem 60px;
+    gap: 36px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text .cta-row {
+    justify-content: center;
+  }
+
+  .hero-text .socials {
+    justify-content: center;
   }
 }
 

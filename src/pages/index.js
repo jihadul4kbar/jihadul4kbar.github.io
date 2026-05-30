@@ -192,6 +192,44 @@ export default function Home() {
     },
   ];
 
+  const talks = [
+    {
+      date: '4 Juni 2025',
+      dateEn: '4 June 2025',
+      title: 'Pembekalan KKN 2025',
+      titleEn: 'KKN 2025 Briefing',
+      tags: ['KKN', 'Community Service'],
+    },
+    {
+      date: '5 November 2025',
+      dateEn: '5 November 2025',
+      title: 'Pemanfaatan AI dalam Penyusunan dan Revisi Dokumen Regulasi',
+      titleEn: 'Utilizing AI in Drafting and Revising Regulatory Documents',
+      tags: ['AI', 'Regulation', 'Document'],
+    },
+    {
+      date: '15 November 2025',
+      dateEn: '15 November 2025',
+      title: 'Membangun Website Profesional dengan Tailwind CSS',
+      titleEn: 'Building Professional Websites with Tailwind CSS',
+      tags: ['Web', 'Tailwind CSS', 'Frontend'],
+    },
+    {
+      date: '18 Oktober 2025',
+      dateEn: '18 October 2025',
+      title: 'Pengenalan Artificial Intelligence & Machine Learning untuk Penelitian & Analisis Data',
+      titleEn: 'Introduction to Artificial Intelligence & Machine Learning for Research & Data Analysis',
+      tags: ['AI', 'Machine Learning', 'Research'],
+    },
+    {
+      date: '18 April 2026',
+      dateEn: '18 April 2026',
+      title: 'Belajar End-to-End WebApp Development — Analisis, Implementasi, dan Dokumentasi Sistem',
+      titleEn: 'Learning End-to-End WebApp Development — Analysis, Implementation, and System Documentation',
+      tags: ['WebApp', 'Full Stack', 'System Analysis'],
+    },
+  ];
+
   return (
     <Layout
       title={siteConfig.title}
@@ -457,9 +495,30 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* PEMBICARA */}
+      <Section id="pembicara"
+        idx={isEn ? '06 — TALKS' : '06 — PEMBICARA'}
+        title={isEn ? 'Speaking engagements' : 'Kegiatan pembicara'}
+        sub={isEn ? 'Workshops, seminars, and guest lectures on technology, AI, and web development.' : 'Workshop, seminar, dan kuliah tamu tentang teknologi, AI, dan pengembangan web.'}
+      >
+        <div className="talks-list">
+          {talks.map((talk, i) => (
+            <Reveal className="talk-item" key={i}>
+              <span className="talk-date">{isEn ? talk.dateEn : talk.date}</span>
+              <div className="talk-body">
+                <h3>{isEn ? talk.titleEn : talk.title}</h3>
+                <div className="talk-tags">
+                  {talk.tags.map((t, j) => <span key={j}>{t}</span>)}
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
       {/* RIWAYAT */}
       <Section id="riwayat"
-        idx={isEn ? '06 — RESUME' : '06 — RIWAYAT'}
+        idx={isEn ? '07 — RESUME' : '07 — RIWAYAT'}
         title={isEn ? 'A short timeline' : 'Riwayat singkat'}
         sub={isEn ? 'Academic and professional journey.' : 'Perjalanan akademik dan profesional.'}
       >
@@ -480,7 +539,7 @@ export default function Home() {
         <div className="wrap">
           <Reveal className="contact-wrap">
             <div>
-              <span className="sec-idx">07 — {isEn ? 'CONTACT' : 'KONTAK'}</span>
+              <span className="sec-idx">08 — {isEn ? 'CONTACT' : 'KONTAK'}</span>
               <h2 style={{marginTop: 14}}>{isEn ? "Let's connect" : 'Mari terhubung'}</h2>
               <p>{isEn ? 'Open to research collaboration, guest lectures, and mentoring. Find me on the channels below.' : 'Terbuka untuk kolaborasi penelitian, kuliah tamu, dan bimbingan. Temukan saya di kanal berikut.'}</p>
             </div>

@@ -11,6 +11,10 @@
     "message": "Projects",
     "description": "Navbar item with label 'Proyek'"
   },
+  "item.label.Pembicara": {
+    "message": "Talks",
+    "description": "Navbar item with label 'Pembicara'"
+  },
   "item.label.Buku": {
     "message": "Books",
     "description": "Navbar item with label 'Buku'"

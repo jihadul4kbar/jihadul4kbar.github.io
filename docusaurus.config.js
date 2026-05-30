@@ -101,6 +101,7 @@ const config = {
           {to: '/#fokus', label: 'Fokus', position: 'right'},
           {to: '/#riset', label: 'Penelitian', position: 'right'},
           {to: '/#proyek', label: 'Proyek', position: 'right'},
+          {to: '/#pembicara', label: 'Pembicara', position: 'right'},
           {to: '/docs/intro', label: 'Buku', position: 'right'},
           {to: '/blog', label: 'Blog', position: 'right'},
           {to: '/resume', label: 'Riwayat', position: 'right'},

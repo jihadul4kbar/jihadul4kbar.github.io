@@ -1643,6 +1643,80 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* =============================
+   TALKS
+   ============================= */
+
+.talks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.talk-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 24px;
+  align-items: start;
+  padding: 22px 4px;
+  border-bottom: 1px solid var(--line-soft);
+  transition: background .2s, padding-left .2s;
+}
+
+.talk-item:hover {
+  background: var(--hover);
+  padding-left: 12px;
+}
+
+.talk-date {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 13px;
+  color: var(--accent);
+  white-space: nowrap;
+  padding-top: 3px;
+}
+
+.talk-body h3 {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 10px;
+  color: var(--fg);
+}
+
+.talk-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.talk-tags span {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 11px;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+@media (max-width: 768px) {
+  .talk-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .talk-date {
+    padding-top: 0;
+  }
+
+  .talk-body h3 {
+    font-size: 16px;
+  }
+}
+
+/* =============================
    CONTACT
    ============================= */
 

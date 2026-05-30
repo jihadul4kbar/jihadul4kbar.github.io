@@ -6,13 +6,13 @@ import { talks as talksData } from '../data/talks';
 
 
 
-function Section({idx, title, sub, seeAll, id, children}) {
+function Section({idx, title, sub, seeAll, id, band, children}) {
   return (
-    <section className="section" id={id}>
+    <section className={clsx('section', band && 'band')} id={id}>
       <div className="wrap">
         <div className="sec-head reveal">
           <span className="sec-idx">{idx}</span>
-          <div style={{flex: 1}}>
+          <div>
             <h2>{title}</h2>
             {sub && <p className="sec-sub">{sub}</p>}
           </div>
@@ -204,75 +204,61 @@ export default function Home() {
       <div className="glows" aria-hidden="true"><span className="g1"></span><span className="g2"></span><span className="g3"></span></div>
 
       {/* HERO */}
-      <header className="hero-section" id="top">
+      <header className="hero" id="top">
         <div className="hero-text">
-          <Reveal>
-            <div className="hero-kicker">
-              {isEn ? 'STMIK Lombok · Computer Science' : 'STMIK Lombok · Ilmu Komputer'}
-            </div>
-          </Reveal>
-          <Reveal>
-            <h1 className="hero-name">
-              <span className="l1">Jihadul</span><br /><span className="l2">Akbar</span>
-            </h1>
-          </Reveal>
-          <Reveal>
-            <div className="hero-role">
-              &gt; {isEn ? 'Lecturer · Researcher · Software Engineer' : 'Dosen · Peneliti · Pengembang Perangkat Lunak'}
-            </div>
-          </Reveal>
-          <Reveal>
-            <p className="hero-lead">
-              {isEn
-                ? 'Passionate about computer-science education, software engineering, and innovative research — dedicated to shaping the next generation of technology professionals.'
-                : 'Tertarik dalam pendidikan ilmu komputer, rekayasa perangkat lunak, dan penelitian inovatif — berdedikasi membentuk generasi profesional teknologi berikutnya.'}
-            </p>
-          </Reveal>
-          <Reveal>
-            <div className="hero-cta">
-              <a className="btn btn-primary" href="#riset">
-                {isEn ? 'View Research' : 'Lihat Penelitian'}
-                <span className="arr">→</span>
-              </a>
-              <a className="btn btn-ghost" href="#kontak">
-                {isEn ? 'Get in Touch' : 'Hubungi Saya'}
-              </a>
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className="hero-socials">
-              <a href="https://scholar.google.com/citations?user=iLr5dMcAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-              <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6890356" target="_blank" rel="noopener">SINTA</a>
-              <a href="https://www.linkedin.com/in/jihadul-akbar-22553a105/" target="_blank" rel="noopener">LinkedIn</a>
-              <a href="https://x.com/Jihadul4kbar" target="_blank" rel="noopener">X</a>
-              <a href="https://github.com/jihadul4kbar" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </Reveal>
+          <div className="kicker reveal">
+            {isEn ? 'STMIK Lombok · Computer Science' : 'STMIK Lombok · Ilmu Komputer'}
+          </div>
+          <h1 className="name reveal">
+            <span className="l1">Jihadul</span><br /><span className="l2">Akbar</span>
+          </h1>
+          <div className="role reveal">
+            &gt; {isEn ? 'Lecturer · Researcher · Software Engineer' : 'Dosen · Peneliti · Pengembang Perangkat Lunak'}
+          </div>
+          <p className="lead reveal">
+            {isEn
+              ? 'Passionate about computer-science education, software engineering, and innovative research — dedicated to shaping the next generation of technology professionals.'
+              : 'Tertarik dalam pendidikan ilmu komputer, rekayasa perangkat lunak, dan penelitian inovatif — berdedikasi membentuk generasi profesional teknologi berikutnya.'}
+          </p>
+          <div className="cta-row reveal">
+            <a className="btn btn-primary" href="#riset">
+              {isEn ? 'View Research' : 'Lihat Penelitian'}
+              <span className="arr">→</span>
+            </a>
+            <a className="btn btn-ghost" href="#kontak">
+              {isEn ? 'Get in Touch' : 'Hubungi Saya'}
+            </a>
+          </div>
+          <div className="socials reveal">
+            <a href="https://scholar.google.com/citations?user=iLr5dMcAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6890356" target="_blank" rel="noopener">SINTA</a>
+            <a href="https://www.linkedin.com/in/jihadul-akbar-22553a105/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/Jihadul4kbar" target="_blank" rel="noopener">X</a>
+            <a href="https://github.com/jihadul4kbar" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
 
-        <Reveal>
-          <div className="portrait">
-            <span className="corner tl"></span>
-            <span className="corner br"></span>
-            <div className="frame">
-              <img
-                src="/img/jihadulakbar.png"
-                alt="Jihadul Akbar"
-                onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('noimg'); }}
-              />
-            </div>
-            <div className="tag">
-              <span className="pulse"></span>
-              {isEn ? 'Open to research collaboration' : 'Tersedia untuk kolaborasi riset'}
-            </div>
+        <div className="portrait reveal">
+          <span className="corner tl"></span>
+          <span className="corner br"></span>
+          <div className="frame">
+            <img
+              src="/img/jihadulakbar.png"
+              alt="Jihadul Akbar"
+              onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('noimg'); }}
+            />
           </div>
-        </Reveal>
+          <div className="tag">
+            <span className="pulse"></span>
+            {isEn ? 'Open to research collaboration' : 'Tersedia untuk kolaborasi riset'}
+          </div>
+        </div>
       </header>
 
       <div className="divider" />
 
       {/* FOKUS */}
-      <Section id="fokus"
+      <Section id="fokus" band
         idx="01 — FOKUS"
         title={isEn ? 'What I work on' : 'Bidang yang saya tekuni'}
         sub={isEn
@@ -280,30 +266,30 @@ export default function Home() {
           : 'Tiga pilar yang menopang pekerjaan saya di kampus maupun di luar kelas.'}
       >
         <div className="grid-3">
-          <Reveal className="card-focus">
+          <div className="card reveal">
             <div className="ic">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v6l9 4 9-4V7"/></svg>
             </div>
             <span className="num">01</span>
             <h3>{isEn ? 'Teaching' : 'Pengajaran'}</h3>
             <p>{isEn ? 'Educating students in software engineering, web development, and information systems.' : 'Mendidik mahasiswa dalam rekayasa perangkat lunak, pengembangan web, dan sistem informasi.'}</p>
-          </Reveal>
-          <Reveal className="card-focus">
+          </div>
+          <div className="card reveal">
             <div className="ic">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
             </div>
             <span className="num">02</span>
             <h3>{isEn ? 'Research' : 'Penelitian'}</h3>
             <p>{isEn ? 'Exploring innovative solutions in computer science and educational technology.' : 'Menjelajahi solusi inovatif dalam ilmu komputer dan teknologi pendidikan.'}</p>
-          </Reveal>
-          <Reveal className="card-focus">
+          </div>
+          <div className="card reveal">
             <div className="ic">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M8 9l-4 3 4 3"/><path d="M16 9l4 3-4 3"/><path d="M13 6l-2 12"/></svg>
             </div>
             <span className="num">03</span>
             <h3>{isEn ? 'Development' : 'Pengembangan'}</h3>
             <p>{isEn ? 'Building practical applications and tools for academic and industry needs.' : 'Membangun aplikasi dan alat praktis untuk kebutuhan akademik dan industri.'}</p>
-          </Reveal>
+          </div>
         </div>
       </Section>
 
@@ -322,7 +308,7 @@ export default function Home() {
             </div>
             <div className="pub-list">
               {publications.map((pub, i) => (
-                <div className="pub-item" key={i}>
+                <div className="pub-item reveal" key={i}>
                   <span className="yr">{pub.year}</span>
                   <div>
                     <span className="ttl">{pub.title}</span>
@@ -367,25 +353,23 @@ export default function Home() {
       </Section>
 
       {/* PROYEK */}
-      <Section id="proyek"
+      <Section id="proyek" band
         idx={isEn ? '03 — PROJECTS' : '03 — PROYEK'}
         title={isEn ? 'Selected projects' : 'Proyek terpilih'}
         sub={isEn ? 'Practical applications and research built for academic, teaching, and community service.' : 'Aplikasi praktis dan penelitian yang dikembangkan untuk akademik, pengajaran, dan pengabdian masyarakat.'}
       >
         <div className="grid-2">
           {projects.map((proj, i) => (
-            <Reveal key={i}>
-              <a className="proj" href={proj.href} target="_blank" rel="noopener">
-                <div className="ptop">
-                  <span className="ptag">{proj.tagYear}</span>
-                </div>
-                <h3>{proj.title}</h3>
-                <p>{isEn ? proj.descEn : proj.descId}</p>
-                <div className="stack">
-                  {proj.tech.map((t, j) => <span key={j}>· {t}</span>)}
-                </div>
-              </a>
-            </Reveal>
+            <a className="proj reveal" href={proj.href} target="_blank" rel="noopener" key={i}>
+              <div className="ptop">
+                <span className="ptag">{proj.tagYear}</span>
+              </div>
+              <h3>{proj.title}</h3>
+              <p>{isEn ? proj.descEn : proj.descId}</p>
+              <div className="stack">
+                {proj.tech.map((t, j) => <span key={j}>· {t}</span>)}
+              </div>
+            </a>
           ))}
         </div>
       </Section>
@@ -401,7 +385,7 @@ export default function Home() {
         }}
       >
         <div className="book-layout">
-          <a className="book-cover" href="https://jihadul4kbar.github.io/docs/category/belajar-web-front-end" target="_blank" rel="noopener">
+          <a className={clsx('book-cover', 'reveal')} href="https://jihadul4kbar.github.io/docs/category/belajar-web-front-end" target="_blank" rel="noopener">
             <span className="bk-label">{isEn ? 'Learning Series' : 'Seri Belajar'}</span>
             <span className="bk-title">Belajar Web<br />Front-End</span>
             <span className="bk-meta">
@@ -429,7 +413,7 @@ export default function Home() {
       </Section>
 
       {/* BLOG */}
-      <Section id="blog"
+      <Section id="blog" band
         idx={isEn ? '05 — BLOG' : '05 — BLOG'}
         title={isEn ? 'Latest writing' : 'Tulisan terbaru'}
         sub={isEn ? 'Technical notes and tutorials from everyday development and teaching work.' : 'Catatan teknis dan tutorial dari aktivitas pengembangan dan pengajaran sehari-hari.'}
@@ -439,7 +423,7 @@ export default function Home() {
         }}
       >
         <div className="grid-2">
-          <a className="post" href="https://jihadul4kbar.github.io/blog/Middleware%20Laravel%2012" target="_blank" rel="noopener">
+          <a className={clsx('post', 'reveal')} href="https://jihadul4kbar.github.io/blog/Middleware%20Laravel%2012" target="_blank" rel="noopener">
             <span className="pdate">
               <b>{isEn ? '2 July 2025' : '2 Juli 2025'}</b> · {isEn ? '1 min read' : '1 menit baca'}
             </span>
@@ -448,7 +432,8 @@ export default function Home() {
             <div className="tags"><span># Laravel</span><span># Web</span><span># Tutorial</span></div>
             <span className="more">{isEn ? 'Read more' : 'Baca selengkapnya'} →</span>
           </a>
-          <a className="post" href="https://jihadul4kbar.github.io/blog/Add%20widgets%20monitoring%20port%20on%20Libre%20LMS" target="_blank" rel="noopener">
+
+          <a className={clsx('post', 'reveal')} href="https://jihadul4kbar.github.io/blog/Add%20widgets%20monitoring%20port%20on%20Libre%20LMS" target="_blank" rel="noopener">
             <span className="pdate">
               <b>{isEn ? '18 January 2025' : '18 Januari 2025'}</b> · {isEn ? '1 min read' : '1 menit baca'}
             </span>
@@ -471,7 +456,7 @@ export default function Home() {
         }}
       >
         <div className="speaker-layout">
-          <a className="speaker-cover" href="/speaker">
+          <a className="speaker-cover reveal" href="/speaker">
             <span className="sp-label">{isEn ? 'Speaker Profile' : 'Profil Pembicara'}</span>
             <span className="sp-title">{isEn ? 'Workshops' : 'Workshop'}<br />{isEn ? '& Seminars' : '& Seminar'}</span>
             <span className="sp-meta">

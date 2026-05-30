@@ -2,6 +2,7 @@ import {useEffect} from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import { talks as talksData } from '../data/talks';
 
 
 
@@ -192,43 +193,7 @@ export default function Home() {
     },
   ];
 
-  const talks = [
-    {
-      date: '4 Juni 2025',
-      dateEn: '4 June 2025',
-      title: 'Pembekalan KKN 2025',
-      titleEn: 'KKN 2025 Briefing',
-      tags: ['KKN', 'Community Service'],
-    },
-    {
-      date: '5 November 2025',
-      dateEn: '5 November 2025',
-      title: 'Pemanfaatan AI dalam Penyusunan dan Revisi Dokumen Regulasi',
-      titleEn: 'Utilizing AI in Drafting and Revising Regulatory Documents',
-      tags: ['AI', 'Regulation', 'Document'],
-    },
-    {
-      date: '15 November 2025',
-      dateEn: '15 November 2025',
-      title: 'Membangun Website Profesional dengan Tailwind CSS',
-      titleEn: 'Building Professional Websites with Tailwind CSS',
-      tags: ['Web', 'Tailwind CSS', 'Frontend'],
-    },
-    {
-      date: '18 Oktober 2025',
-      dateEn: '18 October 2025',
-      title: 'Pengenalan Artificial Intelligence & Machine Learning untuk Penelitian & Analisis Data',
-      titleEn: 'Introduction to Artificial Intelligence & Machine Learning for Research & Data Analysis',
-      tags: ['AI', 'Machine Learning', 'Research'],
-    },
-    {
-      date: '18 April 2026',
-      dateEn: '18 April 2026',
-      title: 'Belajar End-to-End WebApp Development — Analisis, Implementasi, dan Dokumentasi Sistem',
-      titleEn: 'Learning End-to-End WebApp Development — Analysis, Implementation, and System Documentation',
-      tags: ['WebApp', 'Full Stack', 'System Analysis'],
-    },
-  ];
+  const talks = talksData;
 
   return (
     <Layout
@@ -259,7 +224,7 @@ export default function Home() {
             <p className="hero-lead">
               {isEn
                 ? 'Passionate about computer-science education, software engineering, and innovative research — dedicated to shaping the next generation of technology professionals.'
-                : 'Bergairah dalam pendidikan ilmu komputer, rekayasa perangkat lunak, dan penelitian inovatif — berdedikasi membentuk generasi profesional teknologi berikutnya.'}
+                : 'Tertarik dalam pendidikan ilmu komputer, rekayasa perangkat lunak, dan penelitian inovatif — berdedikasi membentuk generasi profesional teknologi berikutnya.'}
             </p>
           </Reveal>
           <Reveal>
@@ -500,18 +465,25 @@ export default function Home() {
         idx={isEn ? '06 — TALKS' : '06 — PEMBICARA'}
         title={isEn ? 'Speaking engagements' : 'Kegiatan pembicara'}
         sub={isEn ? 'Workshops, seminars, and guest lectures on technology, AI, and web development.' : 'Workshop, seminar, dan kuliah tamu tentang teknologi, AI, dan pengembangan web.'}
+        seeAll={{
+          href: '/speaker',
+          label: isEn ? 'All talks' : 'Semua kegiatan',
+        }}
       >
         <div className="talks-list">
           {talks.map((talk, i) => (
-            <Reveal className="talk-item" key={i}>
-              <span className="talk-date">{isEn ? talk.dateEn : talk.date}</span>
-              <div className="talk-body">
-                <h3>{isEn ? talk.titleEn : talk.title}</h3>
-                <div className="talk-tags">
-                  {talk.tags.map((t, j) => <span key={j}>{t}</span>)}
+            <a className="talk-item" href={`/speaker#${talk.slug}`} key={i}>
+              <Reveal>
+                <span className="talk-date">{isEn ? talk.dateEn : talk.date}</span>
+                <div className="talk-body">
+                  <h3>{isEn ? talk.titleEn : talk.title}</h3>
+                  <div className="talk-tags">
+                    {talk.tags.map((t, j) => <span key={j}>{t}</span>)}
+                  </div>
+                  <span className="talk-more">{isEn ? 'View details' : 'Lihat detail'} →</span>
                 </div>
-              </div>
-            </Reveal>
+              </Reveal>
+            </a>
           ))}
         </div>
       </Section>

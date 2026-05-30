@@ -740,7 +740,7 @@ h2 {
   gap: clamp(32px, 5vw, 80px);
   max-width: var(--ifm-container-width);
   margin: 0 auto;
-  padding: 150px var(--pad-x, clamp(22px, 5vw, 72px)) 80px;
+  padding: 50px var(--pad-x, clamp(22px, 5vw, 72px)) 80px;
   background: transparent !important;
 }
 

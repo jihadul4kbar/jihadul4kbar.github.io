@@ -82,7 +82,7 @@ export default function ResumePage() {
           </div>
           <div className="timeline">
             <div className="tl-item reveal">
-              <div className="yr">2020 — 2024</div>
+              <div className="yr">2021 — 2023</div>
               <h3>{isEn ? 'Master of Informatics Engineering' : 'Magister Teknik Informatika'}</h3>
               <div className="org">Universitas Amikom Yogyakarta</div>
               <p>{isEn ? 'Business Intelligence concentration. GPA 3.89/4.00.' : 'Konsentrasi Business Intelligence. IPK 3.89/4.00.'}</p>
@@ -90,7 +90,9 @@ export default function ResumePage() {
                 <span style={{fontFamily:'var(--ifm-font-family-monospace)', fontSize:'11px', color:'var(--accent)', textTransform:'uppercase', letterSpacing:'.08em'}}>Thesis</span>
                 <p style={{fontSize:'14px', color:'var(--muted)', margin:'4px 0 0', fontStyle:'italic', lineHeight:1.5}}>
                   {isEn ? 'Multi Label Film Genre Classification Based On Synopsis Using Long Short-Term Memory (LSTM) Method' : 'Multi Label Klasifikasi Genre Film Berdasarkan Sinopsis Menggunakan Metode Long Short-Term Memory (LSTM)'}
+
                 </p>
+                {isEn ? 'Supervisor: Prof.Ema Utmai' : 'Pembimbing : Prof. Ema Utami'}
               </div>
             </div>
             <div className="tl-item reveal">
@@ -127,13 +129,13 @@ export default function ResumePage() {
           </div>
           <div className="timeline">
             <div className="tl-item reveal">
-              <div className="yr">{isEn ? '2015 — Present' : '2015 — Sekarang'}</div>
-              <h3>{isEn ? 'Lecturer — Computer Science' : 'Dosen — Ilmu Komputer'}</h3>
+              <div className="yr">{isEn ? '2024 — Present' : '2024 — Sekarang'}</div>
+              <h3>{isEn ? 'Lecturer — Computer Science' : 'Dosen — Informatika'}</h3>
               <div className="org">STMIK Lombok</div>
               <p>{isEn ? 'Teaching software engineering, web development, and information systems. Supervising student thesis projects and developing curriculum for undergraduate programs.' : 'Mengajar rekayasa perangkat lunak, pengembangan web, dan sistem informasi. Membimbing skripsi mahasiswa dan mengembangkan kurikulum program sarjana.'}</p>
             </div>
             <div className="tl-item reveal">
-              <div className="yr">2020 — 2024</div>
+              <div className="yr">2021 — 2023</div>
               <h3>{isEn ? 'Research Assistant — Business Intelligence Lab' : 'Research Assistant — Business Intelligence Lab'}</h3>
               <div className="org">Universitas Amikom Yogyakarta</div>
               <p>{isEn ? 'Conducted research on Natural Language Processing and Machine Learning. Published papers on text classification, topic modeling, and sentiment analysis in accredited journals and international conferences.' : 'Melakukan penelitian di bidang Natural Language Processing dan Machine Learning. Menerbitkan paper tentang text classification, topic modeling, dan sentiment analysis di jurnal terakreditasi dan konferensi internasional.'}</p>

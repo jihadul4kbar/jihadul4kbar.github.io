@@ -288,6 +288,156 @@ a { color: inherit; text-decoration: none; }
   display: none;
 }
 
+/* =============================
+   Mobile menu toggle & sidebar
+   ============================= */
+
+/* Hamburger toggle button */
+.navbar__toggle {
+  color: var(--fg);
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  transition: background .2s, border-color .2s;
+}
+
+.navbar__toggle:hover {
+  background: var(--bg-3);
+  border-color: var(--accent);
+}
+
+.navbar__toggle svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+/* Mobile sidebar overlay */
+.navbar-sidebar {
+  background: var(--bg);
+  box-shadow: 4px 0 24px rgba(0,0,0,.35);
+  border-right: 1px solid var(--line);
+}
+
+.navbar-sidebar__backdrop {
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(4px);
+}
+
+/* Sidebar brand area */
+.navbar-sidebar__brand {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 18px;
+}
+
+/* Close button inside sidebar */
+.navbar-sidebar__close {
+  color: var(--fg);
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  transition: background .2s, border-color .2s;
+}
+
+.navbar-sidebar__close:hover {
+  background: var(--bg-3);
+  border-color: var(--accent);
+}
+
+.navbar-sidebar__close svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+/* Sidebar menu items */
+.navbar-sidebar__items {
+  padding: 12px 14px;
+}
+
+.navbar-sidebar__items .menu {
+  font-family: var(--ifm-font-family-base);
+}
+
+.navbar-sidebar__items .menu__link {
+  color: var(--muted);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color .2s, background .2s;
+}
+
+.navbar-sidebar__items .menu__link:hover,
+.navbar-sidebar__items .menu__link--active {
+  color: var(--fg);
+  background: var(--bg-2);
+}
+
+.navbar-sidebar__items .menu__list-item + .menu__list-item {
+  margin-top: 2px;
+}
+
+/* Locale dropdown inside sidebar */
+.navbar-sidebar__items .dropdown {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.navbar-sidebar__items .dropdown > a {
+  color: var(--muted);
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.navbar-sidebar__items .dropdown__menu {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+.navbar-sidebar__items .dropdown__link {
+  color: var(--muted);
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.navbar-sidebar__items .dropdown__link:hover {
+  color: var(--fg);
+  background: var(--bg-3);
+}
+
+/* GitHub icon link inside sidebar */
+.navbar-sidebar__items .navbar-github-link {
+  width: auto;
+  height: auto;
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px !important;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.navbar-sidebar__items .navbar-github-link:hover {
+  color: var(--fg) !important;
+  background: var(--bg-2);
+}
+
+.navbar-sidebar__items .navbar-github-link::before {
+  width: 16px;
+  height: 16px;
+}
+
 /* Footer */
 .footer {
   border-top: 1px solid var(--line-soft);

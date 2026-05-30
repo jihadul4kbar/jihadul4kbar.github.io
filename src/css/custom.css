@@ -397,6 +397,11 @@ a { color: inherit; text-decoration: none; }
   justify-content: space-between;
 }
 
+/* Hide color mode toggle inside mobile sidebar header (moved to top bar) */
+.navbar-sidebar__brand > div {
+  display: none !important;
+}
+
 /* Close button inside sidebar */
 .navbar-sidebar__close {
   color: var(--fg);
@@ -512,8 +517,13 @@ a { color: inherit; text-decoration: none; }
     justify-content: center;
   }
 
-  .navbar__items--right .navbar__item:not(.dropdown):not(.navbar-github-link) {
+  .navbar__items--right .navbar__item:not(.dropdown) {
     display: none !important;
+  }
+
+  /* Show desktop color mode toggle on mobile top bar */
+  .navbar__items--right > div:not(.navbar__item):not([class*="navbarSearchContainer"]) {
+    display: flex !important;
   }
 
   /* Make sure the navbar doesn't overflow */

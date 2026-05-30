@@ -731,6 +731,7 @@ h2 {
   max-width: var(--ifm-container-width);
   margin: 0 auto;
   padding: 150px var(--pad-x, clamp(22px, 5vw, 72px)) 80px;
+  background: transparent !important;
 }
 
 .kicker {

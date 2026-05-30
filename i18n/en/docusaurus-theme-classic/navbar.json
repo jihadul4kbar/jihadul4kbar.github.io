@@ -1,4 +1,8 @@
 {
+  "item.label.Beranda": {
+    "message": "Home",
+    "description": "Navbar item with label 'Beranda'"
+  },
   "item.label.Fokus": {
     "message": "Focus",
     "description": "Navbar item with label 'Fokus'"

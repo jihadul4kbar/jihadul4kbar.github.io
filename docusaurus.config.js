@@ -98,6 +98,7 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
+          {to: '/', label: 'Beranda', position: 'right'},
           {to: '/#fokus', label: 'Fokus', position: 'right'},
           {to: '/#riset', label: 'Penelitian', position: 'right'},
           {to: '/#proyek', label: 'Proyek', position: 'right'},

@@ -255,8 +255,7 @@ a { color: inherit; text-decoration: none; }
   transition: color .2s, background .2s;
 }
 
-.navbar__link:hover,
-.navbar__link--active {
+.navbar__link:hover {
   color: var(--fg) !important;
   background: var(--bg-2);
 }

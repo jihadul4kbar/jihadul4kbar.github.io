@@ -1,35 +1,18 @@
-import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import ResumePage from '@site/src/components/ResumePage';
-import { translate } from '@docusaurus/Translate';
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
 
-function HomepageHeader() {
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          Jihadul Akbar
-        </Heading>
-        <p className="hero__subtitle">jihadul4kbar@gmail.com | +62 78 6457 6745 | Lombok, Indonesia</p>
-      </div>
-    </header>
-  );
-}
-
-export default function Home() {
+export default function Resume() {
   const {siteConfig, i18n} = useDocusaurusContext();
-  const t = (id, message) => translate({id, message}, {locale: i18n.currentLocale});
+  const isEn = i18n.currentLocale === 'en';
+
   return (
     <Layout
-      title={t('resume.contact.title', 'Informasi Kontak')}
-      description="Academic resume of Jihadul Akbar, S.Kom., M.Kom. — Lecturer at STMIK Lombok. Research in NLP, Machine Learning, Software Engineering. Publications on text classification, topic modeling, and sentiment analysis.">
-      <HomepageHeader />
-      <main>
-        <ResumePage />
-      </main>
+      title={isEn ? 'Resume' : 'Riwayat'}
+      description={isEn
+        ? 'Academic resume of Jihadul Akbar — Lecturer at STMIK Lombok. Research in NLP, Machine Learning, Software Engineering.'
+        : 'Riwayat akademik Jihadul Akbar — Dosen di STMIK Lombok. Penelitian di NLP, Machine Learning, Rekayasa Perangkat Lunak.'}>
+      <ResumePage />
     </Layout>
   );
 }

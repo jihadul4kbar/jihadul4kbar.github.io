@@ -33,7 +33,7 @@ export default function ResumePage() {
   return (
     <div style={{position:'relative',zIndex:1}}>
       {/* HERO / HEADER */}
-      <header className="hero" style={{minHeight:'auto', paddingTop:'140px', paddingBottom:'60px'}}>
+      <header className="hero" style={{minHeight:'auto'}}>
         <div className="hero-text" style={{maxWidth:'720px'}}>
           <div className="kicker reveal">
             {isEn ? 'Resume · STMIK Lombok' : 'Riwayat · STMIK Lombok'}
@@ -71,7 +71,7 @@ export default function ResumePage() {
       <div className="divider"></div>
 
       {/* PENDIDIKAN */}
-      <section id="pendidikan">
+      <section className="section" id="pendidikan">
         <div className="wrap">
           <div className="sec-head reveal">
             <span className="sec-idx">01 — {isEn ? 'EDUCATION' : 'PENDIDIKAN'}</span>
@@ -116,7 +116,7 @@ export default function ResumePage() {
       </section>
 
       {/* PENGALAMAN */}
-      <section id="pengalaman" className="band">
+      <section id="pengalaman" className="section band">
         <div className="wrap">
           <div className="sec-head reveal">
             <span className="sec-idx">02 — {isEn ? 'EXPERIENCE' : 'PENGALAMAN'}</span>
@@ -143,7 +143,7 @@ export default function ResumePage() {
       </section>
 
       {/* PENGAJARAN */}
-      <section id="pengajaran">
+      <section className="section" id="pengajaran">
         <div className="wrap">
           <div className="sec-head reveal">
             <span className="sec-idx">03 — {isEn ? 'TEACHING' : 'PENGAJARAN'}</span>
@@ -153,18 +153,18 @@ export default function ResumePage() {
             </div>
           </div>
           <div className="grid-2">
-            <div className="card reveal" style={{padding:'28px'}}>
+            <div className="card reveal">
               <span className="num">{isEn ? 'Courses' : 'Mata Kuliah'}</span>
-              <h3 style={{margin:'14px 0 12px'}}>{isEn ? 'Undergraduate Courses' : 'Mata Kuliah S1'}</h3>
+              <h3>{isEn ? 'Undergraduate Courses' : 'Mata Kuliah S1'}</h3>
               <div className="themes" style={{marginBottom:0}}>
                 {['Web Programming','Software Engineering','Database Systems','Data Structures & Algorithms','Artificial Intelligence','Information Systems','Machine Learning Basics','Natural Language Processing'].map((c,i) => (
                   <span key={i} className="chip">{c}</span>
                 ))}
               </div>
             </div>
-            <div className="card reveal" style={{padding:'28px', borderLeft:'4px solid var(--accent)'}}>
+            <div className="card reveal" style={{borderLeft:'4px solid var(--accent)'}}>
               <span className="num">{isEn ? 'Philosophy' : 'Filosofi'}</span>
-              <h3 style={{margin:'14px 0 12px'}}>{isEn ? 'Teaching Philosophy' : 'Filosofi Mengajar'}</h3>
+              <h3>{isEn ? 'Teaching Philosophy' : 'Filosofi Mengajar'}</h3>
               <p>{isEn
                 ? 'Combining theoretical foundations with practical applications to prepare students for real-world industry challenges. Emphasizing project-based learning and research-oriented thinking.'
                 : 'Menggabungkan fondasi teoretis dengan aplikasi praktis untuk mempersiapkan mahasiswa menghadapi tantangan industri. Menekankan project-based learning dan pemikiran berorientasi riset.'}</p>
@@ -174,7 +174,7 @@ export default function ResumePage() {
       </section>
 
       {/* PUBLIKASI */}
-      <section id="publikasi" className="band">
+      <section id="publikasi" className="section band">
         <div className="wrap">
           <div className="sec-head reveal">
             <span className="sec-idx">04 — {isEn ? 'PUBLICATIONS' : 'PUBLIKASI'}</span>
@@ -260,7 +260,7 @@ export default function ResumePage() {
       </section>
 
       {/* KONFERENSI */}
-      <section id="konferensi">
+      <section className="section" id="konferensi">
         <div className="wrap">
           <div className="sec-head reveal">
             <span className="sec-idx">05 — {isEn ? 'CONFERENCES' : 'KONFERENSI'}</span>
@@ -270,14 +270,14 @@ export default function ResumePage() {
             </div>
           </div>
           <div className="grid-2">
-            <div className="card reveal" style={{padding:'28px'}}>
+            <div className="card reveal">
               <span className="num">{isEn ? 'International' : 'Internasional'}</span>
-              <h3 style={{margin:'14px 0 12px'}}>ICITISEE 2022</h3>
+              <h3>ICITISEE 2022</h3>
               <p>{isEn ? '6th International Conference on Information Technology, Information Systems and Electrical Engineering — Presented paper on multi-label film genre classification using SVM, Logistic Regression and Naïve Bayes.' : '6th International Conference on Information Technology, Information Systems and Electrical Engineering — Mem presentasikan paper tentang klasifikasi genre film multi-label menggunakan SVM, Logistic Regression dan Naïve Bayes.'}</p>
             </div>
-            <div className="card reveal" style={{padding:'28px'}}>
+            <div className="card reveal">
               <span className="num">{isEn ? 'National' : 'Nasional'}</span>
-              <h3 style={{margin:'14px 0 12px'}}>SNTIM & KNIT</h3>
+              <h3>SNTIM & KNIT</h3>
               <p>{isEn ? 'Seminar Nasional Teknologi Informasi dan Multimedia (SNTIM) and Konferensi Nasional Ilmu Komputer dan Teknologi Informasi — Multiple years of participation and paper presentations.' : 'Seminar Nasional Teknologi Informasi dan Multimedia (SNTIM) dan Konferensi Nasional Ilmu Komputer dan Teknologi Informasi — Partisipasi dan presentasi paper di berbagai tahun.'}</p>
             </div>
           </div>
@@ -285,7 +285,7 @@ export default function ResumePage() {
       </section>
 
       {/* KEAHLIAN */}
-      <section id="keahlian" className="band">
+      <section id="keahlian" className="section band">
         <div className="wrap">
           <div className="sec-head reveal">
             <span className="sec-idx">06 — {isEn ? 'SKILLS' : 'KEAHLIAN'}</span>
@@ -305,19 +305,13 @@ export default function ResumePage() {
       </section>
 
       {/* KONTAK / CTA */}
-      <section id="kontak">
+      <section className="section" id="kontak">
         <div className="wrap">
-          <div className="sec-head reveal">
-            <span className="sec-idx">07 — {isEn ? 'CONTACT' : 'KONTAK'}</span>
-            <div>
-              <h2>{isEn ? "Let's connect" : 'Mari terhubung'}</h2>
-              <p className="sec-sub">{isEn ? 'Open to research collaboration, guest lectures, and mentoring.' : 'Terbuka untuk kolaborasi penelitian, kuliah tamu, dan bimbingan.'}</p>
-            </div>
-          </div>
           <div className="contact-wrap reveal">
             <div>
-              <h2 style={{marginTop:14}}>{isEn ? 'Get in Touch' : 'Hubungi Saya'}</h2>
-              <p>{isEn ? 'Interested in collaborating or have a question? Feel free to reach out via email or WhatsApp.' : 'Tertarik berkolaborasi atau punya pertanyaan? Jangan ragu untuk menghubungi via email atau WhatsApp.'}</p>
+              <span className="sec-idx">07 — {isEn ? 'CONTACT' : 'KONTAK'}</span>
+              <h2 style={{marginTop: 14}}>{isEn ? "Let's connect" : 'Mari terhubung'}</h2>
+              <p>{isEn ? 'Open to research collaboration, guest lectures, and mentoring.' : 'Terbuka untuk kolaborasi penelitian, kuliah tamu, dan bimbingan.'}</p>
             </div>
             <div className="contact-links">
               <a className="clink" href="mailto:jihadul4kbar@gmail.com">
